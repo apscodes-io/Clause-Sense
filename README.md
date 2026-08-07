@@ -47,3 +47,47 @@ The system can:
 - Generate concise summaries
 - Answer user questions about uploaded documents
 - Produce structured analysis reports
+## ✨ Features
+
+- 📄 **Smart PDF Processing**
+  - Upload and analyze legal contracts in PDF format.
+
+- 🔍 **OCR for Scanned Documents**
+  - Extract text from scanned or image-based contracts using Tesseract OCR.
+
+- 🤖 **AI-Powered Legal Analysis**
+  - Analyze legal documents using OpenAI to identify important information and explain complex clauses.
+
+- 📑 **Clause Identification**
+  - Automatically detect and categorize important legal clauses such as payment terms, confidentiality, liabilities, and termination conditions.
+
+- ⚠️ **Risk Detection**
+  - Identify potentially risky or ambiguous clauses that may require further legal review.
+
+- 📝 **Contract Summarization**
+  - Generate concise, easy-to-understand summaries of lengthy legal documents.
+
+- 💬 **AI Document Assistant**
+  - Ask questions about uploaded contracts and receive contextual AI-generated answers.
+
+- 📊 **Structured Analysis Report**
+  - Produce a clear report containing extracted information, identified risks, and AI recommendations.
+
+- 🔒 **Secure Document Processing**
+  - Process uploaded documents securely without modifying the original files.
+
+- ⚡ **FastAPI Backend**
+  - High-performance REST APIs for document upload, AI analysis, and report generation.
+  - ## 🛠️ Technology Stack
+
+| Category | Technology |
+|----------|------------|
+| 🎨 UI/UX Design | Figma |
+| ⚙️ Backend Framework | FastAPI |
+| 🐍 Programming Language | Python 3.11 |
+| 🤖 AI Model | OpenAI API |
+| 📄 PDF Processing | PyMuPDF (fitz) |
+| 🔍 OCR Engine | Tesseract OCR |
+| 📚 Python Libraries | PyMuPDF (fitz), shutil |
+| 🌐 API Testing | Postman |
+| 📦 Version Control | Git & GitHub |
