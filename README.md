@@ -91,3 +91,13 @@ The system can:
 | 📚 Python Libraries | PyMuPDF (fitz), shutil |
 | 🌐 API Testing | Postman |
 | 📦 Version Control | Git & GitHub |
+## 👥 Team Member Contributions
+
+ClauseSense is developed collaboratively by an 8-member team, with each team responsible for a key module of the project.
+
+| Team Members | Contributions |
+|--------------|---------------|
+| 🎨 **Alan Sojan** & **Anna** | UI/UX design, wireframing, prototyping, and frontend development. |
+| ⚙️ **Aidan** & **Albin** | Backend development, REST API integration, database management, and server-side logic. |
+| 🤖 **Adarsh** & **Anusha** | AI integration, OpenAI API implementation, document processing using PyMuPDF, and OCR using Tesseract. |
+| ✅ **Alan Antony** & **Anandu** | Testing, system integration, debugging, documentation, and overall project validation. |
