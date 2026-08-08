@@ -35,7 +35,21 @@ export default function Header() {
         </div>
 
         {/* Navigation */}
-        <nav className="hidden items-center gap-10 md:flex">
+        <nav className="hidden items-center gap-8 md:flex">
+          <a
+            href="#upload-panel"
+            className="text-[17px] font-medium text-slate-500 transition hover:text-slate-900"
+          >
+            Audit Contract
+          </a>
+
+          <a
+            href="#contract-comparison"
+            className="text-[17px] font-bold text-[#23456f] transition hover:text-blue-900 flex items-center gap-1.5"
+          >
+            <span>🔄</span> Compare Contracts
+          </a>
+
           <a
             href="#features"
             className="text-[17px] font-medium text-slate-500 transition hover:text-slate-900"
@@ -48,20 +62,6 @@ export default function Header() {
             className="text-[17px] font-medium text-slate-500 transition hover:text-slate-900"
           >
             Capabilities
-          </a>
-
-          <a
-            href="#pricing"
-            className="text-[17px] font-medium text-slate-500 transition hover:text-slate-900"
-          >
-            Pricing
-          </a>
-
-          <a
-            href="#enterprise"
-            className="text-[17px] font-medium text-slate-500 transition hover:text-slate-900"
-          >
-            Enterprise
           </a>
         </nav>
 

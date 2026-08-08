@@ -2,8 +2,10 @@
 
 import { useState } from "react";
 import ContractDashboard, { UploadResponse } from "./ContractDashboard";
+import ContractComparison from "./ContractComparison";
 
 export default function UploadPanel() {
+  const [activeMode, setActiveMode] = useState<"single" | "compare">("single");
   const [file, setFile] = useState<File | null>(null);
   const [result, setResult] = useState<UploadResponse | null>(null);
   const [loading, setLoading] = useState(false);
@@ -75,8 +77,8 @@ export default function UploadPanel() {
     }
   };
 
-  // If contract has been analyzed, display the full interactive dashboard!
-  if (result) {
+  // If contract has been analyzed in single mode, display full interactive dashboard!
+  if (activeMode === "single" && result) {
     return (
       <ContractDashboard
         result={result}
@@ -91,11 +93,40 @@ export default function UploadPanel() {
 
   return (
     <div id="upload-panel" className="mx-auto max-w-5xl px-4 py-12">
-      <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-xl">
-        <h2 className="text-2xl font-bold text-slate-900">Upload & Analyze Contract</h2>
-        <p className="mt-1 text-sm text-slate-500">
-          Upload any legal agreement or contract (PDF) to run instant AI risk analysis, executive summaries, and interactive Q&A.
-        </p>
+      {/* Mode Switcher Tabs */}
+      <div className="flex justify-center mb-8">
+        <div className="inline-flex rounded-2xl bg-slate-100 p-1.5 border border-slate-200 shadow-sm">
+          <button
+            onClick={() => setActiveMode("single")}
+            className={`flex items-center gap-2 rounded-xl px-6 py-3 text-sm font-bold transition ${
+              activeMode === "single"
+                ? "bg-[#23456f] text-white shadow-md"
+                : "text-slate-600 hover:text-slate-900"
+            }`}
+          >
+            📄 Single Contract Audit
+          </button>
+          <button
+            onClick={() => setActiveMode("compare")}
+            className={`flex items-center gap-2 rounded-xl px-6 py-3 text-sm font-bold transition ${
+              activeMode === "compare"
+                ? "bg-[#23456f] text-white shadow-md"
+                : "text-slate-600 hover:text-slate-900"
+            }`}
+          >
+            🔄 Contract Comparison
+          </button>
+        </div>
+      </div>
+
+      {activeMode === "compare" ? (
+        <ContractComparison />
+      ) : (
+        <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-xl">
+          <h2 className="text-2xl font-bold text-slate-900">Upload & Analyze Contract</h2>
+          <p className="mt-1 text-sm text-slate-500">
+            Upload any legal agreement or contract (PDF) to run instant AI risk analysis, executive summaries, and interactive Q&A.
+          </p>
 
         {/* Dropzone */}
         <div className="mt-6">
@@ -147,6 +178,7 @@ export default function UploadPanel() {
           )}
         </button>
       </div>
+      )}
     </div>
   );
 }
